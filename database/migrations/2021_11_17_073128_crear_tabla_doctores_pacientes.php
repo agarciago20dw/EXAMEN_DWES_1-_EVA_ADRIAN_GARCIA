@@ -13,7 +13,7 @@ class CrearTablaDoctoresPacientes extends Migration
      */
     public function up()
     {
-        Schema::create('doctores', function (Blueprint $tabla) {
+        Schema::create('doctors', function (Blueprint $tabla) {
             $tabla->integer('id');
             $tabla->string('nombre');
             $tabla->string('apellidos');
@@ -40,6 +40,7 @@ class CrearTablaDoctoresPacientes extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('doctores');
+        Schema::dropIfExists('pacientes');
     }
 }

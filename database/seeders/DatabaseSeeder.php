@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Doctor;
+use App\Models\Paciente;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(TablasDoctoresPacientesSeeder::class);
+        Doctor::factory(5)->make();
+        Paciente::factory(100)->make();
     }
 }
