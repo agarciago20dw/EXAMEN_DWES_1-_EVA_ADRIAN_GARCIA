@@ -83,4 +83,11 @@ class ControladorPrincipal extends Controller
 
         return redirect('/');
     }
+
+    public function asignarPacienteDoctorFormulario() {
+        $pacientes = Paciente::all();
+        $doctores = Doctor::all();
+
+        return view('formulario_asignar_pac_doc')->with('pacientes', $pacientes)->with('doctores', $doctores);
+    }
 }

@@ -40,6 +40,7 @@
             @yield('listar_doctores')
             @yield('editar_doctor')
             @yield('crear_doctor')
+            @yield('asignar')
         </div>
     </div>
 </div>

@@ -29,3 +29,5 @@ Route::post('/doctor/editar', [ControladorPrincipal::class, 'editarDoctor'])->na
 Route::get('/doctor/crear', [ControladorPrincipal::class, 'crearDoctorFormulario'])->name('doctor.crear.formulario');
 
 Route::post('/doctor/crear', [ControladorPrincipal::class, 'crearDoctor'])->name('doctor.crear');
+
+Route::get('/paciente/doctor/asignar', [ControladorPrincipal::class, 'asignarPacienteDoctorFormulario'])->name('paciente.doctor.asignar');
